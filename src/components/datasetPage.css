@@ -1,0 +1,321 @@
+.dataset-page {
+    display: flex;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  .modal-content {
+    background-color: #2d333b;
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px; /* Increase width */
+    height: 400px; /* Increase height */
+    color: white;
+  }
+  .sidebar {
+    width: 250px;
+    background-color: #1c2128;
+    padding: 20px;
+  }
+  
+  .logo {
+    margin-bottom: 30px;
+  }
+  
+  .github-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar nav li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar nav a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .sidebar nav a svg {
+    margin-right: 10px;
+  }
+  
+  .sidebar nav li.active a {
+    background-color: #2d333b;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #22272e;
+  }
+  
+  header {
+    background-color: #6e40c9;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .sub-header {
+    background-color: #2d333b;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .upload-btn {
+    background-color: #373e47;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .tasks-btn {
+    background-color: #6e40c9;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .dataset-info {
+    flex: 2;
+  }
+  
+  .search-bar {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+    background-color: #2d333b;
+    border: none;
+    border-radius: 20px;
+    color: white;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons button {
+    background-color: #2d333b;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .image-placeholder {
+    background-color: #2d333b;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .right-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .details-sidebar, .tasks-sidebar {
+    background-color: #2d333b;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .details-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .details-sidebar li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .stats {
+    margin-top: 20px;
+  }
+  
+  .stats h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .annotate-btn {
+    width: 100%;
+    background-color: #6e40c9;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .tasks-sidebar h3 {
+    margin-top: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .task-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .task-icon.spinning {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @media (max-width: 1024px) {
+    .content {
+      flex-direction: column;
+    }
+    
+    .right-sidebar {
+      flex-direction: row;
+    }
+    
+    .details-sidebar, .tasks-sidebar {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .right-sidebar {
+      flex-direction: column;
+    }
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #2d333b;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    color: white;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .modal-body p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .modal-footer button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+  }

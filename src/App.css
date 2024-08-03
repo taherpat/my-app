@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #6e40c9;
+  --background-color: #13111b;
+  --secondary-background: #201c2b;
+  --text-color: #ffffff;
+}
+
+.hover-fill-purple:hover {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(64%) saturate(466%) hue-rotate(230deg) brightness(95%) contrast(102%);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}

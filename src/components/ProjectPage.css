@@ -1,0 +1,83 @@
+.project-page {
+    align-items: center;
+    display: flex;
+  }
+
+  .project-page.blur {
+    filter: blur(5px);
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .project-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .project-placeholder {
+    font-weight: bold;
+  }
+  
+  nav {
+    width: 200px;
+    background-color: var(--secondary-background);
+    padding: 20px;
+    height: fit-content;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  nav li.active {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .dataset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .dataset-item {
+    background-color: var(--secondary-background);
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+  
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 40px;
+  }
+  
+  .image-placeholder::after {
+    content: "🖼️";
+  }
