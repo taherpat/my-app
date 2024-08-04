@@ -10,6 +10,9 @@
     "preview": "vite preview"
     
   },
+  "scripts": {
+  "build": "vite build"
+},
   "dependencies": {
     "lucide-react": "^0.412.0",
     "react": "^18.3.1",
